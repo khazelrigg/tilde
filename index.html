@@ -6,58 +6,48 @@
     // the category, name, key, url, search path and color for your commands
     // if none of the specified keys are matched, the '*' key is used
     commands: [
-      [null, 'Google', '*', 'https://encrypted.google.com', '/search?q={}', '#111'],
-      ['Work', 'Drive', 'd', 'https://drive.google.com', '/drive/search?q={}', '#4285f4'],
-      ['Work', 'GitHub', 'g', 'https://github.com', '/search?q={}', '#333'],
-      ['Work', 'Inbox', 'i', 'https://inbox.google.com', '/search/{}', '#4285f4'],
-      ['Work', 'Keep', 'k', 'https://keep.google.com', '/#search/text={}', '#fb0'],
-      ['Lurk', 'Hunt', 'H', 'https://www.producthunt.com', '/search?q={}', '#da552f'],
-      ['Lurk', 'Photos', 'p', 'https://photos.google.com', '/search/{}', '#34a853'],
-      ['Lurk', 'Reddit', 'r', 'https://www.reddit.com', '/search?q={}', '#5f99cf'],
-      ['Lurk', 'Unsplash', 'u', 'https://unsplash.com/new', '/search/{}', '#000'],
-      ['Listen', 'Hypem', 'h', 'https://hypem.com/popular', '/search/{}', '#83c441'],
-      ['Listen', 'Line Radio', 'l', 'https://linerad.io', '/#{}', '#39CCCC'],
-      ['Listen', 'Play Music', 'm', 'https://play.google.com/music/listen#/all', '/music/listen#/sr/{}', '#FF4C20'],
-      ['Listen', 'SoundCloud', 's', 'https://soundcloud.com/discover', '/search?q={}', '#ff8800'],
-      ['Watch', 'Netflix', 'n', 'https://www.netflix.com/browse', '/search?q={}', '#e50914'],
-      ['Watch', 'Twitch', 't', 'https://www.twitch.tv/directory/following', null, '#6441a5'],
-      ['Watch', 'YouTube', 'y', 'https://youtube.com/feed/subscriptions', '/results?search_query={}', '#cd201f'],
-      ['Learn', 'Academy', 'a', 'https://www.khanacademy.org', '/search?page_search_query={}', '#9cb443'],
-      ['Learn', 'Coursera', 'c', 'https://www.coursera.org', '/courses?query={}', '#407ED7'],
-      ['Learn', 'Egghead', 'e', 'https://egghead.io', '/search?q={}', '#171C23'],
-      ['Download', '7digital', '7', 'https://us.7digital.com', '/search?q={}', '#07606e'],
-      ['Download', 'RARBG', 'R', 'https://rarbg.to', '/torrents.php?search={}', '#00d1b2'],
-      ['Download', 'Pirate Bay', 'b', 'https://thepiratebay.org', '/search/{}', '#4c4132'],
-      ['Download', 'YTS', 'Y', 'https://yts.am/browse-movies/all/1080p/all/7/latest', '/browse-movies/{}', '#2f2f2f'],
+      ['News', 'Reddit', 'r', 'https://www.reddit.com', '/search?q={}', '#5f99cf', 'line_style'],
+      ['News', 'KUT', 'kut', 'https://www.kut.org', null, '#ef3400', 'radio'],
+      ['News', 'KXAN', 'kxan', 'https://www.kxan.com', '/search?q={}', '#2a5caa', 'format_quote'],
+      ['Watch', 'YouTube', 'y', 'https://youtube.com/feed/subscriptions', '/results?search_query={}', '#ff0000', 'subscriptions'],
+      ['Watch', 'IMDB', 'imdb', 'http://imdb.com', '/find?ref_=nv_sr_fn&q={}', '#f5de50', 'movie'],
+      ['Watch', 'Netflix', 'flix', 'https://netflix.com', null, '#e50914', 'video_label'],
+      ['Listen', 'Play Music', 'music', 'https://play.google.com/music/listen', null, '#fbbc05', 'play_circle_filled'],
+      ['Listen', 'SoundCloud', 's', 'https://soundcloud.com/discover', '/search?q={}', '#ff8800', 'surround_sound'],
+      ['Listen', 'Bandcamp', 'bc', 'https://bandcamp.com', '/search?q={}', '#629aa9', 'speaker'],
+      ['Listen', 'LastFM', 'fm', 'https://last.fm', null, '#df1007', 'album'],
+      ['Shop', 'Amazon', 'az', 'https://www.amazon.com/', '/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords={}', '#ff9900', 'shopping_cart'],
+      ['Banks', 'Paypal', 'paypal', 'https://paypal.com/', null, '#003087', 'account_balance_wallet'], 
+      ['Banks', 'Capital One', 'capone', 'https://verified.capitalone.com/sic-ui/#/esignin', null, '#004977', 'account_balance'],
+      ['Banks', 'American Express', 'amex', 'https://personalsavings.americanexpress.com/onlinebanking/login.do?', null, '#002663', 'credit_card'],
+      ['Banks', 'Mint', 'mint', 'https://mint.com', null, '#0ac775', 'attach_money'],
+      ['Social', 'Gmail', 'gm', 'https://mail.google.com', null, '#333', 'email'],
+      ['Stuff', 'GitHub', 'g', 'https://github.com', '/search?q={}', '#333', 'memory'],
+      ['Stuff', 'Arch Wiki', 'aw', 'https://wiki.archlinux.org/index.php', '/?search={}', '#333', 'import_contacts'],
+      ['Stuff', 'Drive', 'drive', 'https://drive.google.com', null, '#4285f4', 'folder'],
+      ['Games', 'Steam', 'st', 'https://store.steampowered.com/', '/search/?term={}', '#00adee', 'games'],
     ],
 
     // give suggestions as you type
     suggestions: true,
 
     // max amount of suggestions that will ever be displayed
-    suggestionsLimit: 4,
+    suggestionsLimit: 5,
 
     // the order and limit for each suggestion influencer
     // "Default" suggestions come from CONFIG.defaultSuggestions
     // "DuckDuckGo" suggestions come from the duck duck go search api
     // "History" suggestions come from your previously entered queries
     influencers: [
-      { name: 'Default', limit: 4 },
-      { name: 'History', limit: 1 },
-      { name: 'DuckDuckGo', limit: 4 },
+      { name: 'Default', limit: 5 },
+      { name: 'History', limit: 2 },
+      { name: 'DuckDuckGo', limit: 5 },
     ],
 
     // default search suggestions for the specified queries
     defaultSuggestions: {
-      'd': ['d/u/1'],
-      'g': ['g/issues', 'g/pulls', 'gist.github.com', 'g/cadejscroggins'],
-      'i': ['i/u/1'],
-      'k': ['k/u/1'],
-      'l': ['l/#electronic+chill', 'l/#synthwave+chillwave', 'l/#focus+instrumental', 'l/#piano+sleep'],
-      'm': ['m/music/listen?u=1#/all'],
-      'p': ['p/u/1'],
-      'r': ['r/r/unixporn', 'r/r/startpages', 'r/r/webdev', 'r/r/technology'],
-      's': ['s/you/likes', 's/discover/the-upload'],
+      'g': ['g/issues', 'g/pulls', 'gist.github.com'],
+      'r': ['r/r/unixporn', 'r/r/autodetailing', 'r/r/technology'],
     },
 
     // instantly redirect when a key is matched
@@ -69,10 +59,6 @@
 
     // dynamic background colors when command domains are matched
     colors: true,
-
-    // specify a theme file
-    // remove or set to false to use the hardcoded theme
-    theme: false,
 
     // the delimiter between the key and your search query
     // e.g. to search GitHub for potatoes you'd type "g:potatoes"
@@ -91,6 +77,10 @@
   };
 </script>
 
+<head>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+
 <meta charset="utf-8">
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -99,13 +89,9 @@
 <title>~</title>
 
 <style type="text/css">
-  @import url('https://fonts.googleapis.com/css?family=Lato:400,900');
-
-  :root {
-    --color0: #fff;
-    --color15: #111;
-  }
-
+  @import url('./lato.css');
+	@import url('./maticons.css');
+  
   body {
     position: absolute;
     top: 0;
@@ -114,10 +100,12 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    transition: background-color .2s;
-    background-color: var(--color0);
+    transition: background .2s;
     font-family: Lato, sans-serif;
-    color: var(--color15);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
   }
 
   input,
@@ -130,8 +118,8 @@
     margin: 0;
     border: 0;
     outline: 0;
-    background-color: transparent;
-    color: inherit;
+    background: transparent;
+    color: #fff;
     font-family: Lato, sans-serif;
     text-align: center;
     -webkit-appearance: none;
@@ -161,9 +149,8 @@
 
   #search-form {
     padding: 1em;
-    background-color: var(--color15);
+    background: #111;
     transition: background-color .5s;
-    color: var(--color0);
     box-sizing: border-box;
     z-index: 2;
   }
@@ -200,8 +187,8 @@
   }
 
   .search-suggestion.highlight {
-    background-color: var(--color0);
-    color: var(--color15);
+    background-color: #fff;
+    color: #222;
   }
 
   .search-suggestion b {
@@ -216,7 +203,7 @@
     right: 0;
     left: 0;
     height: 3px;
-    background-color: var(--color0);
+    background-color: #fff;
     opacity: .8;
   }
 
@@ -227,7 +214,6 @@
   #help {
     display: block;
     padding: 8vw;
-    background-color: var(--color0);
     font-size: 1.3rem;
     z-index: 1;
   }
@@ -266,11 +252,18 @@
     width: 2.5em;
     margin-right: 1em;
     border-radius: 50%;
-    background-color: var(--color15);
-    color: var(--color0);
+    background-color: #222;
+    color: #fff;
     font-size: .8em;
     text-align: center;
   }
+
+
+  .command-material-icons {
+   display:inline-block;
+   vertical-align:middle
+  }
+
 
   .command-name {
     position: relative;
@@ -286,7 +279,7 @@
     height: 2px;
     transition: .2s;
     transform: translateX(-2em);
-    background: var(--color15);
+    background-color: #222;
     opacity: 0;
   }
 
@@ -355,7 +348,7 @@
 
   @media (min-width: 1700px) {
     .categories {
-      grid-template-columns: repeat(5, 250px) 185px;
+      grid-template-columns: repeat(6, 250px) 185px;
     }
   }
 </style>
@@ -376,6 +369,7 @@
 <script>
   const $ = {
     bodyClassAdd: c => $.el('body').classList.add(c),
+    bodyClassHas: c => $.el('body').classList.contains(c),
     bodyClassRemove: c => $.el('body').classList.remove(c),
     el: s => document.querySelector(s),
     els: s => [].slice.call(document.querySelectorAll(s) || []),
@@ -483,12 +477,12 @@
     }
 
     _buildListCommands(category) {
-      return this._commands.map(([cmdCategory, name, key, url]) => {
+      return this._commands.map(([cmdCategory, name, key, url, ,search, materialicon]) => {
         if (cmdCategory === category) {
           return (
             `<li class="command">
               <a href="${url}" target="${this._newTab ? '_blank' : '_self'}">
-                <span class="command-key">${key}</span>
+                <span class="material-icons">${materialicon}</span>
                 <span class="command-name">${name}</span>
               </a>
             </li>`
@@ -670,6 +664,7 @@
       Promise.all(this._getInfluencerPromises(input)).then(res => {
         const suggestions = this._flattenAndUnique(res);
         this._clearSuggestions();
+
         if (suggestions.length) {
           this._appendSuggestions(suggestions, input);
           this._registerSuggestionEvents();
@@ -811,7 +806,7 @@
         const splitSearch = query.split(this._searchDelimiter);
         const splitPath = query.split(this._pathDelimiter);
 
-        this._commands.some(([category, name, key, url, searchPath]) => {
+        this._commands.some(([category, name, key, url, searchPath, materialicon]) => {
           res.isKey = query === key;
           res.isSearch = !res.isKey && splitSearch[0] === key;
           res.isPath = !res.isKey && splitPath[0] === key;
@@ -900,7 +895,7 @@
     }
 
     hide() {
-      $.bodyClassRemove('form');
+      $.bodyClassRemove('form')
       this._inputEl.value = '';
       this._inputElVal = '';
     }
@@ -922,8 +917,9 @@
     }
 
     _clearPreview() {
-      this._previewValue(this._inputElVal);
+      this._inputEl.value = this._inputElVal;
       this._inputEl.focus();
+      this._setBackgroundFromQuery(this._inputElVal);
     }
 
     _handleKeydown(e) {
@@ -947,7 +943,7 @@
       const { isKey } = this._queryParser.parse(newQuery);
       this._inputElVal = newQuery;
       this._setBackgroundFromQuery(newQuery);
-      if (!newQuery || isHelp) this.hide();
+      if (!newQuery || isHelp ) this.hide();
       if (isHelp) this._help.toggle();
       if (this._instantRedirect && isKey) this._submitWithValue(newQuery);
       if (this._suggester) this._suggester.suggest(newQuery);
@@ -1055,12 +1051,4 @@
     delimiter: CONFIG.clockDelimiter,
     form: getForm(),
   });
-
-  if (CONFIG.theme) {
-    const link = document.createElement('link');
-    link.href = CONFIG.theme;
-    link.type = 'text/css';
-    link.rel = 'stylesheet';
-    $.el('head').appendChild(link);
-  }
 </script>

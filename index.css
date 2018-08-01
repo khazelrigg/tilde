@@ -1,0 +1,13 @@
+body {
+    background: #222222;
+    color: #c2c2b0;
+}
+
+#help {
+    background: #222222;
+    colro: $c2c2b0
+}
+    
+.help#center {
+    color: #222222;
+}
