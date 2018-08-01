@@ -3,6 +3,7 @@
 Inspired by [/r/startpages](https://www.reddit.com/r/startpages)—the idea is to have a homepage for your browser that is functional and sexy.
 
 ![Screenshot](SCREENSHOT.png?raw=true "Screenshot")
+![Workflow](workflow.gif "Workflow")
 
 ## Usage
 
@@ -38,6 +39,11 @@ If you enter in a full domain or URL, you will be redirected to said domain or U
 ## Configuration
 
 The above is just the beginning. Open up the [index.html](index.html) file and read through the `CONFIG`!
+
+## Use XResources
+symlink this folder to nginx
+[Live Reload - Firefox Addon](https://addons.mozilla.org/en-US/firefox/user/blaise-io/)
+Rule: Watch index.css for changes
 
 ## License
 
