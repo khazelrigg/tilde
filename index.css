@@ -1,6 +1,8 @@
-body {
-    background: #222222;
-    color: #c2c2b0;
+:root {
+    --background: #222222;
+    --foreground: #c2c2b0;
+    --searchBackground: #222222;
+    --searchForeground: $c2c2b0;
 }
 
 #help {
