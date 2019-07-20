@@ -9,19 +9,19 @@
      * Commands without a category don't show up in the help menu.
      */
     commands: [
-      /**{
-        name: 'Google',
-        key: '*',
-        url: 'https://encrypted.google.com',
-        search: '/search?q={}',
-        color: '#000',
-      },*/
       {
         name: 'DuckDuckGo',
         key: '*',
         url: 'https://duckduckgo.com',
         search: '/?q={}',
         color: '#222',
+      },
+      {
+        name: 'Google',
+        key: 'ggl',
+        url: 'https://encrypted.google.com',
+        search: '/search?q={}',
+        color: '#4285f4',
       },
       {
         category: 'Work',
@@ -33,27 +33,27 @@
       },
       {
         category: 'Work',
+        name: 'Gmail',
+        key: 'gm',
+        url: 'https://mail.google.com',
+        search: '',
+        color: 'linear-gradient(135deg, #ea4335, #dd4b39)',
+      },
+      {
+        category: 'Work',
         name: 'GitHub',
         key: 'g',
         url: 'https://github.com',
         search: '/search?q={}',
-        color: 'linear-gradient(135deg, #8ccae1, #6dabd6)',
+        color: 'linear-gradient(135deg, #444, #333)',
       },
       {
         category: 'Work',
-        name: 'Keep',
-        key: 'k',
-        url: 'https://keep.google.com',
-        search: '/#search/text={}',
-        color: 'linear-gradient(135deg, #fca550, #fcd050)',
-      },
-      {
-        category: 'Lurk',
-        name: 'Hunt',
-        key: 'p',
-        url: 'https://www.producthunt.com',
-        search: '/search?q={}',
-        color: 'linear-gradient(135deg, #da552f, #da802f)',
+        name: 'Arch Wiki',
+        key: 'aw',
+        url: 'https://wiki.archlinux.org/index.php',
+        search: '/?search={}',
+        color: 'linear-gradient(65deg, #1793D1, #333)',
       },
       {
         category: 'Lurk',
@@ -73,27 +73,27 @@
       },
       {
         category: 'Listen',
-        name: 'Hypem',
-        key: 'h',
-        url: 'https://hypem.com/popular',
-        search: '/search/{}',
-        color: 'linear-gradient(135deg, #83c441, #62c441)',
-      },
-      {
-        category: 'Listen',
-        name: 'Line Radio',
-        key: 'l',
-        url: 'https://linerad.io',
-        search: '/#{}',
-        color: 'linear-gradient(135deg, #a29bfe, #bb9bfe)',
-      },
-      {
-        category: 'Listen',
         name: 'SoundCloud',
         key: 's',
         url: 'https://soundcloud.com/discover',
         search: '/search?q={}',
         color: 'linear-gradient(135deg, #ff8800, #ffc800)',
+      },
+      {
+        category: 'Listen',
+        name: 'BandCamp',
+        key: 'bc',
+        url: 'https://bandcamp.com',
+        search: '/search?q={}',
+        color: '#1DA0C3',
+      },
+      {
+        category: 'Listen',
+        name: 'LastFM',
+        key: 'fm',
+        url: 'https://last.fm',
+        search: '/search?q={}',
+        color: '#BA0000',
       },
       {
         category: 'Watch',
@@ -105,23 +105,24 @@
       },
       {
         category: 'Watch',
-        name: 'Twitch',
-        key: 't',
-        url: 'https://www.twitch.tv/directory/following',
-        color: 'linear-gradient(135deg, #6441a5, #7d41a5)',
-      },
-      {
-        category: 'Watch',
         name: 'YouTube',
-        key: 'y',
+        key: 'yt',
         url: 'https://youtube.com/feed/subscriptions',
         search: '/results?search_query={}',
         color: 'linear-gradient(135deg, #cd201f, #cd4c1f)',
       },
       {
+        category: 'Shop',
+        name: 'Amazon',
+        key: 'az',
+        url: 'https://smile.amazon.com',
+        search: '/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords={}',
+        color: 'linear-gradient(135deg, #ff9900, #222)',
+      },
+      {
         category: 'Learn',
-        name: 'Academy',
-        key: 'a',
+        name: 'Khan Academy',
+        key: 'khan',
         url: 'https://www.khanacademy.org',
         search: '/search?page_search_query={}',
         color: 'linear-gradient(135deg, #9cb443, #80b443)',
@@ -129,32 +130,24 @@
       {
         category: 'Learn',
         name: 'Coursera',
-        key: 'c',
+        key: 'coursera',
         url: 'https://www.coursera.org',
         search: '/courses?query={}',
         color: 'linear-gradient(135deg, #407ED7, #4058d7)',
       },
       {
-        category: 'Learn',
-        name: 'Egghead',
-        key: 'e',
-        url: 'https://egghead.io',
-        search: '/search?q={}',
-        color: 'linear-gradient(135deg, #171C23, #171923)',
-      },
-      {
         category: 'Download',
-        name: 'Bay',
-        key: 'b',
+        name: 'The Bay',
+        key: 'tpb',
         url: 'https://thepiratebay.org',
         search: '/search/{}',
-        color: 'linear-gradient(135deg, #d2b9a6, #d2c4a6)',
+        color: 'linear-gradient(135deg, #C2724D, #A4724D)',
       },
       {
         category: 'Download',
         name: 'YTS',
-        key: 'Y',
-        url: 'https://yts.am/browse-movies/all/1080p/all/7/latest',
+        key: 'yts',
+        url: 'https://yts.am/browse-movies',
         search: '/browse-movies/{}',
         color: 'linear-gradient(135deg, #2f2f2f, #373737)',
       },
@@ -207,7 +200,7 @@
     /**
      * Open triggered queries in a new tab.
      */
-    newTab: true,
+    newTab: false,
 
     /**
      * Dynamic overlay background colors when command domains are matched.
@@ -253,7 +246,7 @@
     /**
     --background: #fff;
     --foreground: #232931;
-    --searchBackground: #000;
+    --searchBackground: #222;
     --searchForeground: #fff;
     */
     /* fonts */
@@ -265,6 +258,15 @@
 
   /* to download a different font locally:
      https://google-webfonts-helper.herokuapp.com/fonts */
+/* nunito-regular - latin */
+   @font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Nunito Regular'), local('Nunito-Regular'),
+      url('../fonts/nunito-v10-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/nunito-v10-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   }
 
   @font-face {
     font-family: Lato;
@@ -393,7 +395,7 @@
     width: 100%;
     padding: 0 1rem;
     margin-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: var(--font-weight-bold);
     letter-spacing: 0.125rem;
     text-transform: uppercase;

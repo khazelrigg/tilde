@@ -2,14 +2,5 @@
     --background: #222222;
     --foreground: #c2c2b0;
     --searchBackground: #222222;
-    --searchForeground: $c2c2b0;
-}
-
-#help {
-    background: #222222;
-    colro: $c2c2b0
-}
-    
-.help#center {
-    color: #222222;
+    --searchForeground: #c2c2b0;
 }
